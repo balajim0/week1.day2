@@ -18,11 +18,12 @@ public class MissingElementInAnArray {
 		int[] arr = { 1, 2, 3, 4, 7, 6, 8 };
 		Arrays.sort(arr);
 		int length = arr.length;
-		for (int i = 0; i < length; i++)
-			if ((i) != arr[i]) {
-				System.out.println(arr[i]);
+		for (int i = arr[0]; i < length; i++) {
+			if (i != arr[i - 1]) {
+				System.out.println(i);
 				break;
-	}
+			}
+		}
 
-}
+	}
 }
